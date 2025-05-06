@@ -1,0 +1,44 @@
+<%- include('partials/header'); %>
+    <section class="profile-friend">
+        <h2>Mijn profiel</h2>
+        <h3>
+            Username: <%= user.username %>
+        </h3>
+        <figure>
+            <img src="<%= user.photoUrl %>" alt="Description of the image">
+            <figcaption>Profile foto van <%= user.username %>
+            </figcaption>
+        </figure>
+        <p>Email: <%= user.emailAddress %>
+        </p>
+        <p>Je korte omschrijving: <%= user.shortDescription %>
+        </p>
+        <form class="divBorder" action="/updateProfile" method="post">
+            <label for="photoUrl">(URL van) een foto:</label>
+            <input type="text" id="photoUrl" name="photoUrl" value="<%= user.photoUrl %>" required>
+
+            <label for="shortDescription">Korte omschrijving:</label>
+            <textarea id="shortDescription" name="shortDescription" required><%= user.shortDescription %></textarea>
+
+            <button type="submit">Update Profiel</button>
+        </form>
+    </section>
+    <section class="container">
+        <div class="divBorder">
+            <h2>Vrienden</h2>
+            <!-- Vrienden waarmee je al bevriend bent -->
+            <div class="profile-friend">
+                <% for (let user of friends) { %>
+                    <h3>
+                        <%= user.username %>
+                    </h3>
+                    <figure>
+                        <img src="<%= user.photoUrl %>" alt="Description of the image">
+                        <figcaption>Profile picture of <%= user.username %>
+                        </figcaption>
+                    </figure>
+                    <% } %>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer'); %>

@@ -1,0 +1,53 @@
+<%- include('partials/header'); %>
+    <section class="container">
+        <div class="divBorder">
+            <h2>Vrienden</h2>
+            <div class="container">
+                <!-- Vrienden waarmee je al bevriend bent -->
+                <div class="profile-friend">
+                    <% for (let user of friends) { %>
+                        <h3>
+                            <%= user.username %>
+                        </h3>
+                        <figure>
+                            <img src="<%= user.photoUrl %>" alt="Description of the image">
+                            <figcaption>Profile picture of <%= user.username %>
+                            </figcaption>
+                        </figure>
+                        <% } %>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <section class="container">
+        <div class="divBorder">
+            <h2>Word vrienden!</h2>
+            <div class="container">
+                <% for (let user of notFriends) { %>
+                    <div class="profile-friend">
+                        <h3>
+                            <%= user.username %>
+                        </h3>
+                        <figure>
+                            <img src="<%= user.photoUrl %>" alt="Description of the image">
+                            <figcaption>Profile picture of <%= user.username %>
+                            </figcaption>
+                        </figure>
+                        <p>
+                            <%= user.shortDescription %>
+                        </p>
+
+                        <!-- Form for adding a friend -->
+                        <form method="post" action="/profiles/adduser/<%= user.id %>">
+                            <button type="submit">
+                                Stuur een vriendschapsverzoek
+                            </button>
+                        </form>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </section>
+    </section>
+    <%- include('partials/footer'); %>

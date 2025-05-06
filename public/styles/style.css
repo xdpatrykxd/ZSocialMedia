@@ -1,0 +1,220 @@
+/* Main Styles */
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+}
+
+/* Style links */
+a {
+  color: #0eff00;
+  text-decoration: none;
+}
+
+/* Style links on hover */
+a:hover {
+  color: #00ffcc;
+}
+
+/* Define a container for content */
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  text-align: center;
+}
+
+/* Style buttons */
+button {
+  background-color: #0eff00;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Style buttons on hover */
+button:hover {
+  background-color: #00ffcc;
+}
+
+/* Style a footer section */
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #000;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+/* Profile image styling */
+.profile img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  margin-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Caption for the profile image */
+.profile figcaption {
+  color: #777;
+  margin-top: 8px;
+}
+
+/* Button styling */
+.add-friend-button {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-top: 10px;
+  transition: background-color 0.3s;
+}
+
+.add-friend-button:hover {
+  background-color: #45a049;
+}
+
+/* Profile friend section */
+.profile-friend {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-friend h3 {
+  font-size: 18px;
+  margin-bottom: 8px;
+}
+
+.profile-friend img {
+  max-width: 100%;
+  border-radius: 50%;
+}
+
+.profile-friend p {
+  margin-top: 8px;
+}
+
+.profile-friend button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.profile-friend button:hover {
+  background-color: #2980b9;
+}
+
+/* Style all h elements */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+figcaption {
+  color: #fff;
+  margin: 5px;
+  text-align: center;
+}
+
+/* Optionally, style the links inside the header */
+header a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+}
+
+header a:hover {
+  text-decoration: underline;
+}
+
+.divBorder {
+  max-width: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #fff; /* Add a 1px solid white border */
+}
+/* Navigation Bar Styles */
+nav {
+  padding: 10px; /* Padding for spacing */
+}
+
+/* Navigation Links Styles */
+nav a {
+  color: #00ff00; /* Green text color */
+  text-decoration: none; /* Remove underline from links */
+  padding: 8px 12px; /* Padding for spacing inside each link */
+  border: 1px solid #fff; /* White border for links */
+  margin: 0 5px; /* Margin between links */
+  border-radius: 4px; /* Border radius for rounded corners */
+}
+
+/* Hover Styles for Links */
+nav a:hover {
+  background-color: #00ff66; /* Light green background on hover */
+  color: #fff; /* White text color on hover */
+}
+/* Styles for the timeline container */
+.divTimeline {
+  max-width: 600px; /* Adjust as needed */
+  margin: 20px auto;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styles for individual messages */
+.message {
+  display: flex;
+  align-items: flex-start; /* Align items at the start of the flex container */
+  margin-bottom: 10px;
+}
+
+/* Styles for user pictures */
+.message img {
+  max-width: 60px;
+  max-height: 60px;
+  border-radius: 50%;
+  margin-right: 10px; /* Adjust the spacing between picture and text */
+}
+
+/* Styles for message content */
+.message-content {
+  flex-grow: 1; /* Allow the content to grow and take remaining space */
+}
+
+/* Optional: Style the timestamp or any other additional information */
+.message-timestamp {
+  color: #777;
+  font-size: 12px;
+}

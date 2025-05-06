@@ -1,0 +1,20 @@
+<%- include('partials/header'); %>
+    <section class="container">
+        <div class="divTimeline">
+            <h2>Alle berichten</h2>
+            <div class="message">
+                <ul>
+                    <% for (let message of messagesWithSenderInfo) { %>
+                        <li class="container">
+                            <img src="<%= message.senderInfo.photoUrl %>" alt="Sender's Picture">
+                            <strong>
+                                <%= message.senderInfo.username %>:
+                            </strong>
+                            <%= message.content %>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer'); %>

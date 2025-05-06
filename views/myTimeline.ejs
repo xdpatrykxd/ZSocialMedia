@@ -1,0 +1,34 @@
+<%- include('partials/header'); %>
+
+    <!-- Display existing messages -->
+    <section class="container">
+        <div class="divBorder">
+            <h2>Berichten:</h2>
+            <div class="divBorder">
+                <ul>
+                    <% for(let message of allMessages){ %>
+                        <li>
+                            <strong>
+                                <%= user.username %>:
+                            </strong>
+                            <%= message.content %>
+                        </li>
+                        <% } %>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <!-- Add new messages-->
+    <section class="container">
+        <div class="divBorder">
+            <h2>Schrijf een bericht!</h2>
+            <div class="divBorder">
+                <form action="/myTimeline/addMessage" method="post">
+                    <label for="messageContent">Je bericht:</label>
+                    <input type="text" id="messageContent" name="messageContent" required>
+                    <button type="submit">Stuur het op!</button>
+                </form>
+            </div>
+        </div>
+    </section>
+    <%- include('partials/footer'); %>
